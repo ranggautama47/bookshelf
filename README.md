@@ -112,14 +112,14 @@ Progress Bar Colors:
 ```bash
 git clone https://github.com/ranggautama47/bookshelf.git
 cd bookshelf
-
+```
     Buka file home.html di browser
 
- Opsi 2: Live Server (Rekomendasi)
+ # Opsi 2: Live Server (Rekomendasi)
 
 
-# Install Live Server Extension di VS Code
-# Klik kanan home.html → Open with Live Server
+## Install Live Server Extension di VS Code
+## Klik kanan home.html → Open with Live Server
 
 Opsi 3: Deploy ke GitHub Pages
 
@@ -130,25 +130,24 @@ Opsi 3: Deploy ke GitHub Pages
     Tunggu beberapa menit, akses di https://username.github.io/bookshelf
 
 
-
-📸 Screenshots
-
+## 📸 Screenshots
 
 ### 🏠 Homepage
-![Home Page](./src/screenshots/home.png)
+![Home Page](./src/homepage.png)
 
 ### 🔍 Explore Page  
-![Explore Page](./src/screenshots/explore.png)
+![Explore Page](./src/explore.png)
 
 ### 💾 Save Page
-![Save Page](./src/screenshots/save.png)
+![Save Page](./src/save.png)
 
 ### 📖 Detail Book
-![Detail Page](./src/screenshots/detail.png)
-🔧 API & Storage
+![Detail Page](./src/detailbook.png)
+
+## 🔧 API & Storage
 LocalStorage Structure
 javascript
-
+```bash
 {
   books: [
     {
@@ -165,7 +164,7 @@ javascript
     }
   ]
 }
-
+```
 📝 Fitur Dicoding Compliance
 
 ✅ Book Item Component (data-testid attributes):
