@@ -1,0 +1,91 @@
+<!-- ============================
+FILE: add_book.html
+Path: ./add_book.html
+============================ -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"content="width=device-width,initial-scale=1">
+  <title>Tambah Buku Baru</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="desktop-nav">
+    <div class="logo">Bookshelf</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="save.html">Saved</a>
+    </div>
+  </nav>
+
+  <nav class="mobile-nav">
+    <a href="home.html">🏠<br>Home</a>
+    <a href="explore.html">🔍<br>Explore</a>
+    <a href="save.html">💾<br>Saved</a>
+    <a href="add_book.html" class="active">➕<br>Add</a>
+  </nav>
+
+  <main class="page-container">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+        <a href="home.html" class="back-arrow" style="text-decoration:none;color:#fff;padding:8px;background:#141414;border-radius:10px;border:1px solid #222">&lt;</a>
+        <h2 style="margin:0">Tambah Buku Baru</h2>
+      </div>
+
+      <form id="addBookForm">
+        <label class="form-label">Cover Buku</label>
+
+        <div id="coverBox" class="cover-box">
+
+            <img id="coverPreview" class="cover-preview" style="display:none" >
+
+            <div id="coverPlaceholder">
+                <div style="font-size:26px;color:var(--neon)">⬆️</div>
+                <p style="margin-top:6px;font-weight:700">Upload Cover</p>
+                <p style="font-size:12px;color:#999">Drag & drop atau klik</p>
+            </div>
+
+            <input type="file" id="bookCover" accept="image/*" style="display:none">
+        </div>
+        <input type="file" id="bookCover" accept="image/*" style="display:none" />
+
+        <label class="form-label" style="margin-top:14px">Judul Buku</label>
+        <input class="add-input" id="bookTitle" placeholder="Masukkan judul buku" required />
+
+        <label class="form-label" style="margin-top:14px">Penulis</label>
+        <input class="add-input" id="bookAuthor" placeholder="Masukkan nama penulis" required />
+
+        <label class="form-label" style="margin-top:14px">Tahun Terbit</label>
+        <input class="add-input" id="bookYear" type="number" placeholder="Masukkan tahun terbit" required />
+
+        <label class="form-label" style="margin-top:14px">Kategori</label>
+        <div id="categoryButtons" class="category-grid">
+          <div class="cat-card " data-category="Fiction">Fiction</div>
+          <div class="cat-card" data-category="Non-Fiction">Non-Fiction</div>
+          <div class="cat-card" data-category="Technology">Teknologi</div>
+          <div class="cat-card" data-category="Self-Help">Self-Help</div>
+          <div class="cat-card" data-category="History">Sejarah</div>
+          <div class="cat-card" data-category="Science">Sains</div>
+          <div class="cat-card" data-category="Biography">Biography</div>
+          <div class="cat-card" data-category="Business">Business</div>
+          <div class="cat-card" data-category="Other">Lainnya</div>
+        </div>
+
+        <label class="form-label" style="margin-top:14px">Deskripsi (opsional)</label>
+        <textarea id="bookDescription" class="add-textarea" placeholder="Tambahkan deskripsi buku..."></textarea>
+
+        <div id="checkCard" class="check-card" style="margin-top:14px">
+          <input type="checkbox" id="isComplete" style="width:18px;height:18px;accent-color:var(--neon)"/>
+          <label for="isComplete">Selesai dibaca</label>
+        </div>
+
+        <button id="submitBtn" class="submit-btn" type="submit">+ Masukkan Buku ke Rak</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

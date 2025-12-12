@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bookshelf - Explore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAV DESKTOP -->
+  <nav class="desktop-nav">
+    <div class="logo">Bookshelf</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="explore.html" class="active">Explore</a>
+      <a href="save.html">Saved</a>
+    </div>
+  </nav>
+
+  <!-- NAV MOBILE -->
+  <nav class="mobile-nav">
+    <a href="home.html">🏠<br>Home</a>
+    <a href="explore.html" class="active">🔍<br>Explore</a>
+    <a href="save.html">💾<br>Saved</a>
+    <a href="add_book.html">➕<br>Add</a>
+  </nav>
+
+  <main class="page-container">
+
+    <!-- 🔎 SEARCH BAR -->
+    <div class="explore-search-box">
+      <input 
+        type="text"
+        id="searchInput"
+        class="search-large"
+        placeholder="Cari berdasarkan judul buku..."
+      >
+    </div>
+
+    <!-- 🔥 CATEGORY LIST -->
+    <div class="category-wrap">
+      <button class="category-btn active" data-category="All">Semua</button>
+      
+      <button class="category-btn" data-category="Fiction">Fiction</button>
+      <button class="category-btn" data-category="Non Fiction">Non Fiksi</button>
+      <button class="category-btn" data-category="Technology">Teknologi</button>
+      <button class="category-btn" data-category="Self-Help">Self-Help</button>
+      <button class="category-btn" data-category="History">Sejarah</button>
+      <button class="category-btn" data-category="Science">Sains</button>
+      <button class="category-btn" data-category="Biography">Biography</button>
+      <button class="category-btn" data-category="Business">Business</button>
+      <button class="category-btn" data-category="Other">Lainnya</button>
+    </div>
+
+    <!-- 📚 TITLE + COUNT -->
+    <div class="explore-title-row">
+      <h1>All Books</h1>
+      <span id="exploreCount">0 Buku</span>
+    </div>
+
+    <!-- 📚 BOOK RESULT GRID -->
+    <div id="exploreBookGrid" class="book-grid"></div>
+
+  </main>
+
+  <a href="add_book.html" class="desktop-fab">+</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

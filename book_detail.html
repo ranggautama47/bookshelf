@@ -1,0 +1,49 @@
+<!-- ============================
+FILE: book_detail.html
+Path: ./book_detail.html
+============================ -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"content="width=device-width,initial-scale=1">
+  <title>Detail Buku</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="back-btn" style="left:18px;top:18px">←</div>
+
+  <main style="width:100%;display:flex;flex-direction:column;align-items:center;padding-bottom:80px">
+    <img id="cover" class="cover-img" src="" alt="cover">
+    <div id="title" class="book-title">Judul Buku</div>
+    <div id="author" class="book-author">Nama Penerbit</div>
+
+    <div class="icon-row">
+      <div class="icon-btn">⭐</div>
+      <div class="icon-btn">💬</div>
+      <div class="icon-btn">↗</div>
+    </div>
+
+    <div class="card" style="max-width:700px">
+      <div class="card-title">Description</div>
+      <div id="desc" class="desc-box">Deskripsi buku akan tampil di sini...</div>
+    </div>
+
+    <div class="card" style="max-width:700px">
+      <div class="card-title">Reading Progress</div>
+      <div class="progress-bar-wrapper"><div id="progressBar" class="progress-bar-fill"></div></div>
+      <span id="percentLabel" class="percent-value">0%</span>
+      <input id="rangeInput" type="range" min="0" max="100" value="0" />
+    </div>
+
+    <div class="card" style="max-width:700px">
+      <div class="card-title">Details</div>
+      <div class="detail-row"><span>Tahun</span><span id="detailYear">—</span></div>
+      <div class="detail-row"><span>Kategori</span><span id="detailCategory">—</span></div>
+      <div class="detail-row"><span>Status</span><span id="detailStatus" class="status-chip orange-chip">Belum selesai</span></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
