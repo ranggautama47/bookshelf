@@ -214,7 +214,7 @@ function placeholderImage(){
 /* ---------- Page renderers ---------- */
 function refreshCurrentPage(){ // rerun appropriate renderer based on current page
   const p = location.pathname.split("/").pop();
-  if(p === "home.html" || p === "") renderHome();
+  if(p === "index.html" || p === "") renderHome();
   else if(p === "explore.html") renderExplore();
   else if(p === "save.html") renderSave();
   else if(p === "add_book.html") renderAddBook();
@@ -719,7 +719,7 @@ function renderAddBook(){
     const book = findBookById(editId);
     if(!book){ 
       alert("Buku tidak ditemukan"); 
-      location.href="home.html"; 
+      location.href="index.html"; 
       return; 
     }
     
@@ -963,7 +963,7 @@ function renderAddBook(){
       };
       books.push(newBook);
       saveBooks(books);
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     }
   };
 }
@@ -977,7 +977,7 @@ function renderBookDetail() {
   
   if (!bookId) {
     alert("Buku tidak ditemukan");
-    window.location.href = "home.html";
+    window.location.href = "index.html";
     return;
   }
   
@@ -985,7 +985,7 @@ function renderBookDetail() {
   
   if (!book) {
     alert("Buku tidak ditemukan");
-    window.location.href = "home.html";
+    window.location.href = "index.html";
     return;
   }
   
